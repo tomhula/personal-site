@@ -187,6 +187,37 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Portrait layout for mobile screenshots */
+.portrait-layout {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-areas: 
+        "title title"
+        "content image"
+        "links links";
+    gap: 20px;
+    align-items: start;
+}
+
+.portrait-layout h3 {
+    grid-area: title;
+}
+
+.portrait-layout .project-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait-layout .project-screenshot {
+    grid-area: image;
+    margin-bottom: 0;
+}
+
+.portrait-layout .project-links {
+    grid-area: links;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -274,6 +305,20 @@ footer p {
 
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Adjust portrait layout for smaller screens */
+    .portrait-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "image"
+            "content"
+            "links";
+    }
+
+    .portrait-layout .project-screenshot {
+        margin-bottom: 15px;
     }
 }
 
