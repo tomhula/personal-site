@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,13 @@
         <div class="container">
             <div class="profile">
                 <div class="profile-image">
-                    <img src="pictures/pfp.png" alt="Profile Picture">
+                    <img src="pictures/pfp.png" alt="Profilový obrázek">
                 </div>
                 <div class="profile-content">
                     <h1>Tomáš Hůla</h1>
-                    <p class="tagline">Software Engineer</p>
+                    <p class="tagline">Softwarový inženýr</p>
                     <div class="social-links">
-                        <a href="https://tomashula.cz" target="_blank" title="Personal Website"><i class="fas fa-globe"></i><span>Website</span></a>
+                        <a href="https://tomashula.cz" target="_blank" title="Osobní web"><i class="fas fa-globe"></i><span>Web</span></a>
                         <a href="https://linkedin.com/in/tomashula" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                         <a href="https://github.com/tomhula" target="_blank" title="GitHub"><i class="fab fa-github"></i><span>GitHub</span></a>
                         <a href="TomášHůla.pdf" target="_blank" title="CV"><i class="fas fa-file-alt"></i><span>CV</span></a>
@@ -30,23 +30,23 @@
 
     <section class="contact-info">
         <div class="container">
-            <h2>Contact Information</h2>
+            <h2>Kontaktní informace</h2>
             <div class="contact-details">
                 <div class="contact-item" onclick="copyToClipboard(this)">
                     <i class="fas fa-envelope"></i>
-                    <p class="copyable" data-tooltip="Click to copy">tomashula06@gmail.com</p>
+                    <p class="copyable" data-tooltip="Klikněte pro zkopírování">tomashula06@gmail.com</p>
                 </div>
                 <div class="contact-item" onclick="copyToClipboard(this)">
                     <i class="fas fa-phone"></i>
-                    <p class="copyable" data-tooltip="Click to copy">+420 737 463 452</p>
+                    <p class="copyable" data-tooltip="Klikněte pro zkopírování">+420 737 463 452</p>
                 </div>
                 <div class="contact-item" onclick="copyToClipboard(this)">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p class="copyable" data-tooltip="Click to copy">Prague, Czech Republic</p>
+                    <p class="copyable" data-tooltip="Klikněte pro zkopírování">Praha, Česká republika</p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
-                    <p>CET (UTC+1) <span id="current-time"></span></p>
+                    <p>SEČ (UTC+1) <span id="current-time"></span></p>
                 </div>
             </div>
         </div>
@@ -54,17 +54,17 @@
 
     <section class="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Projekty</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h3>Plenr</h3>
                     <div class="project-screenshot">
-                        <img src="/pictures/screenshots/plenr.png" alt="Plenr screenshot">
+                        <img src="/pictures/screenshots/plenr.png" alt="Snímek obrazovky Plenr">
                     </div>
-                    <p>Web system for personal trainers to plan workouts with their clients. The application provides a comprehensive solution for managing workouts, users, and schedules.</p>
+                    <p>Webový systém pro osobní trenéry k plánování tréninků s jejich klienty. Aplikace poskytuje komplexní řešení pro správu tréninků, uživatelů a rozvrhů.</p>
                     <div class="project-links">
                         <a href="https://github.com/tomhula/plenr" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://plenr.tomashula.cz" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://plenr.tomashula.cz" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Živá ukázka</a>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
                         <p>Ječná Mobile je android aplikace, vytvořená pro studenty SPŠE Ječná v Praze. Byla vytvořena z důvodů pohodlnosti čtení školního portálu. Aplikace je NEOFICIÁLNÍ a tím pádem nemá nic společného se školním softwarem.</p>
                     </div>
                     <div class="project-screenshot">
-                        <img src="pictures/screenshots/jecna_mobile.png" alt="Ječná Mobile Screenshot">
+                        <img src="pictures/screenshots/jecna_mobile.png" alt="Snímek obrazovky Ječná Mobile">
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/tomhula/JecnaMobile" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
@@ -95,14 +95,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tomáš Hůla. All rights reserved.</p>
+            <p>&copy; 2025 Tomáš Hůla. Všechna práva vyhrazena.</p>
         </div>
     </footer>
 
     <script>
         function updateClock() {
             const now = new Date();
-            const timeString = now.toLocaleTimeString('en-GB');
+            const timeString = now.toLocaleTimeString('cs-CZ');
             document.getElementById('current-time').textContent = ' - ' + timeString;
         }
 
@@ -120,18 +120,18 @@
                 const elements = document.querySelectorAll('.copyable');
                 elements.forEach(el => {
                     if (el.textContent === text) {
-                        el.setAttribute('data-tooltip', 'Copied!');
+                        el.setAttribute('data-tooltip', 'Zkopírováno!');
                         el.classList.add('copied');
 
                         // Reset after 2 seconds
                         setTimeout(() => {
-                            el.setAttribute('data-tooltip', 'Click to copy');
+                            el.setAttribute('data-tooltip', 'Klikněte pro zkopírování');
                             el.classList.remove('copied');
                         }, 2000);
                     }
                 });
             }).catch(err => {
-                console.error('Failed to copy text: ', err);
+                console.error('Nepodařilo se zkopírovat text: ', err);
             });
         }
     </script>
